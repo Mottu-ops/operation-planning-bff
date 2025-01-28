@@ -16,6 +16,6 @@ jobs:
     uses: mottu-ops/pipeline-core/.github/workflows/container-nodejs-kubernetes.yaml@v2
     with:
       app_name: operation-planning-bff
-      namespace: operation
+      namespace: attendance
       bu: rental-bu
     secrets: inherit
