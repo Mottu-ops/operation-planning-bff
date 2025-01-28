@@ -4,8 +4,7 @@ on:
     tags:
       - v*
     branches:
-      - main 
-      - develop
+      - main
   pull_request:
     branches:
       - main
