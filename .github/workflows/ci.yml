@@ -1,0 +1,21 @@
+name: CICD Pipeline V2
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - main 
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  Pipeline:
+    uses: mottu-ops/pipeline-core/.github/workflows/container-nodejs-kubernetes.yaml@v2
+    with:
+      app_name: operation-planning-bff
+      namespace: operation
+      bu: rental-bu
+    secrets: inherit

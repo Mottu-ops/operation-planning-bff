@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  bff:
+    container_name: operation-planning-bff
+    build:
+      context: .
+      target: development
+    env_file:
+      - .env
+    ports:
+      - '3000:3000'
+      - '9229:9229'
+    restart: always
+    command: yarn start:dev
+    networks:
+      - network
+    volumes:
+      - .:/usr/src/app
+
+networks:
+  network:
