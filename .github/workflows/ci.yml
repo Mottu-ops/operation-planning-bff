@@ -12,7 +12,7 @@ on:
 
 jobs:
   Pipeline:
-    uses: mottu-ops/pipeline-core/.github/workflows/container-nodejs-kubernetes.yaml@v2
+    uses: Mottu-ops/pipeline-core/.github/workflows/container-nodejs-kubernetes.yaml@v2
     with:
       app_name: operation-planning-bff
       namespace: attendance
